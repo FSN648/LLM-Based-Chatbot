@@ -1,19 +1,20 @@
-#Agentic LLM Chatbot with LangGraph and RAG
+## Agentic LLM Chatbot with LangGraph and RAG
 This project implements an agentic chatbot built around an open-weight large language model as its core reasoning engine. Rather than fine-tuning the model, the focus is on treating it as a powerful black box and orchestrating it with tools and routing logic to handle diverse user queries.
 On receiving a user message, the chatbot dynamically routes it down one of three paths:
 
-Web search — queries a search engine to retrieve up-to-date or external information
-Document retrieval (RAG) — searches and retrieves relevant passages from a local reference knowledge base
-Direct response — answers general queries directly using the LLM's own knowledge
+1-Web search: queries a search engine to retrieve up-to-date or external information
+2-Document retrieval (RAG): searches and retrieves relevant passages from a local reference knowledge base
+3-Direct response: answers general queries directly using the LLM's own knowledge
 
 Once the appropriate path is selected, the corresponding pipeline executes and produces the final response to the user.
-Tech Stack
 
-LangChain & LangGraph for orchestration and agent workflow
-TavilySearch for web search retrieval
-HuggingFaceEmbeddings + FAISS for vector-based document retrieval (RAG)
-BM25Retriever for keyword-based retrieval
-TogetherAI for LLM inference
+## Tech Stack
+-LangChain & LangGraph for orchestration and agent workflow
+-TavilySearch for web search retrieval
+-HuggingFaceEmbeddings + FAISS for vector-based document retrieval (RAG)
+-BM25Retriever for keyword-based retrieval
+-TogetherAI for LLM inference
+
 ## Notes
 
 The reference knowledge base for the RAG pipeline is built from publicly available materials from the Stanford NLP course. The internal document collection is primarily based on the textbook:
