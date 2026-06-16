@@ -2,7 +2,7 @@
 This project implements an agentic chatbot built around an open-weight large language model as its core reasoning engine. Rather than fine-tuning the model, the focus is on treating it as a powerful black box and orchestrating it with tools and routing logic to handle diverse user queries.
 On receiving a user message, the chatbot dynamically routes it down one of three paths:
 
-1-Web search: queries a search engine to retrieve up-to-date or external information/n
+1-Web search: queries a search engine to retrieve up-to-date or external information\n
 2-Document retrieval (RAG): searches and retrieves relevant passages from a local reference knowledge base
 3-Direct response: answers general queries directly using the LLM's own knowledge
 
